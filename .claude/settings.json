@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 apps/ai-employee/writer.py*)",
+      "WebSearch(*)",
+      "WebFetch(*)",
+      "Read(TASK.md)",
+      "Read(output/**)",
+      "Edit(TASK.md)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '========================================' && echo '  AI社員 起動しました' && echo '========================================' && echo '' && echo '[TASK.md の現在の指示]' && echo '' && cat TASK.md"
+          }
+        ]
+      }
+    ]
+  }
+}
