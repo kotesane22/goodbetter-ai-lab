@@ -621,4 +621,4 @@ P：Point（主張）   ── もう一度結論
 ---
 
 *著者：イケピー（good and better）*  
-*© 2024 good and better — 無断転載禁止*
+*© 2026 good and better — 無断転載禁止*
