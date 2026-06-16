@@ -72,7 +72,7 @@ export default function AssessmentPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 sm:p-8">
           {/* Step: Theme */}
           {step === "theme" && (
             <div>
@@ -164,7 +164,34 @@ export default function AssessmentPage() {
                     <p className="text-sm font-semibold text-slate-800 mb-3">
                       {qi + 1}. {q.text}
                     </p>
-                    <div className="flex gap-2">
+                    {/* Mobile: vertical list */}
+                    <div className="flex flex-col gap-2 sm:hidden">
+                      {reflectionLabels.map((label, li) => {
+                        const val = li + 1;
+                        const selected = reflectionAnswers[qi] === val;
+                        return (
+                          <button
+                            key={li}
+                            onClick={() => {
+                              const updated = [...reflectionAnswers];
+                              updated[qi] = val;
+                              setReflectionAnswers(updated);
+                            }}
+                            className={`flex items-center gap-3 px-4 py-3 rounded-xl border text-sm text-left transition-all ${
+                              selected
+                                ? "border-blue-500 bg-blue-50 text-blue-800 font-medium"
+                                : "border-slate-200 text-slate-600 hover:border-slate-300"
+                            }`}
+                          >
+                            <span className={`w-5 h-5 rounded-full border-2 shrink-0 transition-colors ${selected ? "border-blue-500 bg-blue-500" : "border-slate-300"}`} />
+                            <span className="font-semibold w-4 text-slate-400">{val}</span>
+                            <span>{label}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {/* Desktop: horizontal */}
+                    <div className="hidden sm:flex gap-2">
                       {reflectionLabels.map((label, li) => {
                         const val = li + 1;
                         const selected = reflectionAnswers[qi] === val;
@@ -183,15 +210,10 @@ export default function AssessmentPage() {
                             }`}
                           >
                             <span className={`w-5 h-5 rounded-full border-2 transition-colors ${selected ? "border-blue-500 bg-blue-500" : "border-slate-300"}`} />
-                            <span className="hidden sm:block text-center leading-tight">{label}</span>
-                            <span className="sm:hidden font-bold">{val}</span>
+                            <span className="text-center leading-tight">{label}</span>
                           </button>
                         );
                       })}
-                    </div>
-                    <div className="flex justify-between text-xs text-slate-400 mt-1 px-1 sm:hidden">
-                      <span>全くない</span>
-                      <span>常にある</span>
                     </div>
                   </div>
                 ))}

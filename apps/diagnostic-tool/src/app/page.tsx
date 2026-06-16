@@ -6,7 +6,7 @@ export default function WelcomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center p-6">
       <div className="max-w-lg w-full">
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-10 text-center">
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-10 text-center">
           <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
             <svg
               className="w-7 h-7 text-white"
@@ -45,7 +45,7 @@ export default function WelcomePage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 mt-0.5">●</span>
-                AIが行動変容の度合いを診断し、フィードバックを提供します
+                行動変容の度合いを診断し、フィードバックを提供します
               </li>
             </ul>
             <p className="text-xs text-slate-400 pt-1">所要時間：約10〜15分</p>

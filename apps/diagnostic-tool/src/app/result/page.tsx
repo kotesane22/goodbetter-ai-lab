@@ -87,10 +87,10 @@ export default function ResultPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-6">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8 sm:py-12 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Header */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 sm:p-8">
           <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-2">
             診断結果
           </p>
@@ -201,18 +201,18 @@ export default function ResultPage() {
         </div>
 
         {/* Actions */}
-        <div className="flex gap-3">
-          <Link
-            href="/"
-            className="flex-1 text-center bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold py-3 rounded-xl transition-colors text-sm"
-          >
-            トップへ戻る
-          </Link>
+        <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="/assessment"
-            className="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-colors text-sm"
+            className="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm"
           >
             もう一度診断する
+          </Link>
+          <Link
+            href="/"
+            className="flex-1 text-center bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold py-3.5 rounded-xl transition-colors text-sm"
+          >
+            トップへ戻る
           </Link>
         </div>
       </div>
