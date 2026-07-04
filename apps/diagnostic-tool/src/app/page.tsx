@@ -37,7 +37,7 @@ export default function WelcomePage() {
             <ul className="text-sm text-slate-600 space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 mt-0.5">●</span>
-                3つの職場シナリオにあなたの対応を記入します
+                3つの職場シナリオにあなたの対応を回答します
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 mt-0.5">●</span>
