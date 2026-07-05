@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { scenarios, reflectionQuestions, reflectionLabels } from "@/lib/scenarios";
 import { generateDiagnosis } from "@/lib/scoring";
+import { generateDiagnosisAI, getApiKey, setApiKey as saveApiKey } from "@/lib/aiDiagnosis";
 
 type Step = "theme" | `scenario-${number}` | "reflection";
 
@@ -22,6 +23,13 @@ export default function AssessmentPage() {
   const [trainingTheme, setTrainingTheme] = useState("");
   const [scenarioAnswers, setScenarioAnswers] = useState<(number | null)[]>([null, null, null]);
   const [reflectionAnswers, setReflectionAnswers] = useState<(number | null)[]>([null, null, null, null]);
+  const [apiKey, setApiKeyState] = useState("");
+  const [showKeyInput, setShowKeyInput] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    setApiKeyState(getApiKey());
+  }, []);
 
   const step = STEPS[stepIndex];
   const progress = (stepIndex / (TOTAL - 1)) * 100;
@@ -44,14 +52,34 @@ export default function AssessmentPage() {
     if (stepIndex > 0) setStepIndex((i) => i - 1);
   };
 
-  const handleSubmit = () => {
-    const result = generateDiagnosis({
+  const handleSubmit = async () => {
+    if (submitting) return;
+    setSubmitting(true);
+
+    const data = {
       trainingTheme,
       scenarioAnswers: scenarioAnswers as number[],
       reflectionAnswers: reflectionAnswers as number[],
-    });
+    };
+
+    // APIキーがあればAI診断、失敗時はルールベースに自動フォールバック
+    let result = null;
+    let mode: "ai" | "rule" = "rule";
+    if (apiKey.trim()) {
+      try {
+        result = await generateDiagnosisAI(data);
+        mode = "ai";
+      } catch (e) {
+        console.error("AI診断に失敗したためルールベースに切り替えます:", e);
+      }
+    }
+    if (!result) {
+      result = generateDiagnosis(data);
+    }
+
     sessionStorage.setItem("diagnosisResult", JSON.stringify(result));
     sessionStorage.setItem("trainingTheme", trainingTheme);
+    sessionStorage.setItem("diagnosisMode", mode);
     router.push("/result");
   };
 
@@ -93,6 +121,36 @@ export default function AssessmentPage() {
                 className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 onKeyDown={(e) => e.key === "Enter" && canProceed() && handleNext()}
               />
+
+              {/* Optional: AI診断（BYOK） */}
+              <div className="mt-6 border-t border-slate-100 pt-5">
+                <button
+                  type="button"
+                  onClick={() => setShowKeyInput((v) => !v)}
+                  className="flex items-center gap-2 text-sm text-slate-600 hover:text-slate-800 transition-colors"
+                >
+                  <span className={`inline-block w-2 h-2 rounded-full ${apiKey.trim() ? "bg-green-500" : "bg-slate-300"}`} />
+                  AI診断を使う（任意・Anthropic APIキー）
+                  <span className="text-slate-400">{showKeyInput ? "▲" : "▼"}</span>
+                </button>
+                {showKeyInput && (
+                  <div className="mt-3 space-y-2">
+                    <input
+                      type="password"
+                      value={apiKey}
+                      onChange={(e) => {
+                        setApiKeyState(e.target.value);
+                        saveApiKey(e.target.value);
+                      }}
+                      placeholder="sk-ant-..."
+                      className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      キーはこのブラウザ内（localStorage）にのみ保存され、Anthropic以外には送信されません。未入力の場合はルールベースで診断します。
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           )}
 
@@ -245,10 +303,14 @@ export default function AssessmentPage() {
             ) : (
               <button
                 onClick={handleSubmit}
-                disabled={!canProceed()}
+                disabled={!canProceed() || submitting}
                 className="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-200 disabled:text-slate-400 text-white font-semibold px-6 py-2.5 rounded-xl transition-colors text-sm"
               >
-                診断結果を見る
+                {submitting
+                  ? apiKey.trim()
+                    ? "AI診断中…"
+                    : "診断中…"
+                  : "診断結果を見る"}
               </button>
             )}
           </div>

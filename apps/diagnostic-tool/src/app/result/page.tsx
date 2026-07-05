@@ -65,12 +65,14 @@ function ScoreRing({ score }: { score: number }) {
 export default function ResultPage() {
   const [result, setResult] = useState<DiagnosisResult | null>(null);
   const [trainingTheme, setTrainingTheme] = useState("");
+  const [mode, setMode] = useState<string>("rule");
 
   useEffect(() => {
     const stored = sessionStorage.getItem("diagnosisResult");
     const theme = sessionStorage.getItem("trainingTheme");
     if (stored) setResult(JSON.parse(stored));
     if (theme) setTrainingTheme(theme);
+    setMode(sessionStorage.getItem("diagnosisMode") ?? "rule");
   }, []);
 
   if (!result) {
@@ -91,9 +93,16 @@ export default function ResultPage() {
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Header */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 sm:p-8">
-          <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-2">
-            診断結果
-          </p>
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
+              診断結果
+            </p>
+            {mode === "ai" && (
+              <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 border border-blue-100 rounded-full px-2.5 py-0.5">
+                AI診断
+              </span>
+            )}
+          </div>
           <h1 className="text-xl font-bold text-slate-900 mb-1">
             行動変容診断レポート
           </h1>

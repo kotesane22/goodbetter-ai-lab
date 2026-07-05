@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "研修後 行動変容診断",
-  description: "企業研修後の行動変容をAIが診断するツール",
+  description: "企業研修後の行動変容を診断するツール（AI診断オプション対応）",
 };
 
 export default function RootLayout({

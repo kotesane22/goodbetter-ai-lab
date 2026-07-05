@@ -45,7 +45,7 @@ export default function WelcomePage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 mt-0.5">●</span>
-                行動変容の度合いを診断し、フィードバックを提供します
+                行動変容の度合いを診断し、フィードバックを提供します（AI診断は任意で利用可）
               </li>
             </ul>
             <p className="text-xs text-slate-400 pt-1">所要時間：約10〜15分</p>
