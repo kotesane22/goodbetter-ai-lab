@@ -1,0 +1,99 @@
+/* =========================================================
+   design tokens — ikeP portfolio
+   デザイン変更は原則このファイルの変数だけで完結させる。
+   ========================================================= */
+
+:root {
+  /* ---- brand: ティール基調（イケピーの色） ---- */
+  --c-teal-900: #063f3d;
+  --c-teal-700: #0b615d;
+  --c-teal-600: #0d7c76;
+  --c-teal-500: #109b93;   /* primary */
+  --c-teal-400: #35b9b0;
+  --c-teal-200: #a6e3dd;
+  --c-teal-100: #d8f2ef;
+  --c-teal-050: #eef8f7;
+
+  /* ---- accent（差し色。使いすぎない） ---- */
+  --c-accent: #f6a623;      /* 温かみのある山吹。CTA/ハイライト最小限 */
+  --c-accent-soft: #fce6bf;
+
+  /* ---- neutrals: 余白で見せるための静かな背景 ---- */
+  --c-ink-900: #10201f;     /* 見出し */
+  --c-ink-700: #274543;     /* 本文 */
+  --c-ink-500: #5a726f;     /* 補足 */
+  --c-ink-300: #9db2af;     /* 罫線寄り */
+  --c-line:    #e2ece9;
+  --c-bg:      #fbfcfb;     /* ほぼ白の温かいオフホワイト */
+  --c-surface: #ffffff;
+  --c-surface-2: #f3f8f6;
+
+  /* ---- semantic ---- */
+  --c-text:        var(--c-ink-700);
+  --c-heading:     var(--c-ink-900);
+  --c-muted:       var(--c-ink-500);
+  --c-primary:     var(--c-teal-500);
+  --c-primary-ink: #ffffff;
+  --c-link:        var(--c-teal-600);
+
+  /* ---- typography ---- */
+  --ff-base: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+             "Noto Sans JP", "Yu Gothic Medium", "Meiryo",
+             system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ff-display: var(--ff-base);
+
+  --fs-hero:   clamp(2.2rem, 6.5vw, 4.2rem);
+  --fs-h1:     clamp(1.8rem, 4.5vw, 2.8rem);
+  --fs-h2:     clamp(1.4rem, 3.2vw, 2rem);
+  --fs-h3:     clamp(1.15rem, 2.2vw, 1.35rem);
+  --fs-lead:   clamp(1.05rem, 2.1vw, 1.25rem);
+  --fs-body:   1rem;
+  --fs-small:  0.875rem;
+  --fs-cap:    0.78rem;
+
+  --lh-tight: 1.18;
+  --lh-snug:  1.4;
+  --lh-body:  1.75;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold:   700;
+
+  --ls-tight: -0.02em;
+  --ls-wide:  0.08em;
+
+  /* ---- spacing scale（8pxベース） ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  /* ---- layout ---- */
+  --w-max: 1120px;
+  --w-text: 68ch;
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+
+  /* ---- radius ---- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* ---- shadow（控えめ。装飾は脇役） ---- */
+  --sh-1: 0 1px 2px rgba(16, 32, 31, 0.05);
+  --sh-2: 0 6px 20px rgba(16, 32, 31, 0.07);
+  --sh-3: 0 18px 44px rgba(16, 32, 31, 0.10);
+
+  /* ---- motion ---- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 220ms;
+
+  /* ---- z ---- */
+  --z-header: 100;
+}

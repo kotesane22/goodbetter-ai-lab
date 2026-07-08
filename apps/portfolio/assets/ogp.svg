@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="ikeP portfolio OGP">
+  <rect width="1200" height="630" fill="#fbfcfb"/>
+  <rect x="0" y="0" width="1200" height="12" fill="#109b93"/>
+
+  <!-- 右側：ブランドパネル＋マスコット -->
+  <rect x="760" y="70" width="380" height="490" rx="48" fill="#eef8f7"/>
+  <g transform="translate(800,150) scale(0.94)">
+    <path d="M160 74C160 52 148 40 132 38c4 14 12 22 24 26" fill="#35b9b0"/>
+    <path d="M160 74C160 50 174 38 192 38c-4 15-14 24-30 30" fill="#109b93"/>
+    <circle cx="160" cy="46" r="7" fill="#f6a623"/>
+    <rect x="46" y="70" width="228" height="228" rx="70" fill="#109b93"/>
+    <circle cx="108" cy="205" r="15" fill="#f6a623" opacity="0.55"/>
+    <circle cx="212" cy="205" r="15" fill="#f6a623" opacity="0.55"/>
+    <circle cx="118" cy="176" r="17" fill="#ffffff"/>
+    <circle cx="202" cy="176" r="17" fill="#ffffff"/>
+    <circle cx="122" cy="179" r="7.5" fill="#063f3d"/>
+    <circle cx="198" cy="179" r="7.5" fill="#063f3d"/>
+    <path d="M142 214c10 12 26 12 36 0" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- 左側：テキスト -->
+  <text x="90" y="250" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="96" font-weight="700" fill="#10201f" letter-spacing="-2">ikeP</text>
+  <text x="92" y="322" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="34" font-weight="700" fill="#0d7c76">ポートフォリオ</text>
+  <text x="92" y="392" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif" font-size="30" fill="#5a726f">イラスト・キャラクター・生成AI</text>
+  <rect x="92" y="430" width="120" height="8" rx="4" fill="#f6a623"/>
+</svg>

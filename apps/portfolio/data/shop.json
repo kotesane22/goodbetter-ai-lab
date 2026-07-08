@@ -1,0 +1,32 @@
+{
+  "_note": "販売リンクを増やすときは items 配列に1オブジェクト追記するだけ。url は外部販売ページの直リンク。サイト内決済は作らない。color は tokens.css の値やHEXを指定。",
+  "items": [
+    {
+      "id": "famima-print",
+      "name": "ファミマプリント クリエイターズ",
+      "description": "全国のファミリーマートのマルチコピー機で購入できるプリント作品。",
+      "url": "",
+      "badge": "FP",
+      "color": "#0d7c76",
+      "note": "外部サイト（ファミマプリント）へ移動します"
+    },
+    {
+      "id": "line-stamp",
+      "name": "LINEスタンプ",
+      "description": "LINE STORE で販売中のオリジナルスタンプ。トークで使えます。",
+      "url": "",
+      "badge": "LINE",
+      "color": "#06c755",
+      "note": "外部サイト（LINE STORE）へ移動します"
+    },
+    {
+      "id": "coconala",
+      "name": "ココナラ",
+      "description": "イラスト・デザインの制作依頼はこちらから。スキルを出品中。",
+      "url": "",
+      "badge": "coco",
+      "color": "#f6a623",
+      "note": "外部サイト（ココナラ）へ移動します"
+    }
+  ]
+}

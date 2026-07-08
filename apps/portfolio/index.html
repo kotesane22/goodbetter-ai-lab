@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ikeP ポートフォリオ | イラスト・キャラクター・生成AI</title>
+  <meta name="description" content="ikeP（イケピー）のポートフォリオ。イラスト・キャラクターデザイン・生成AI活用の実績と作品、制作依頼・グッズ販売の窓口。">
+  <meta name="theme-color" content="#109b93">
+  <meta name="color-scheme" content="light">
+
+  <!-- favicon -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <!-- OGP / Twitter（公開時、URLは実サイトの絶対URLに差し替え） -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ikeP ポートフォリオ">
+  <meta property="og:description" content="イラスト・キャラクターデザイン・生成AI活用。ikePの作品と、制作依頼・グッズ販売の窓口。">
+  <meta property="og:image" content="assets/ogp.png">
+  <meta property="og:site_name" content="ikeP portfolio">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ikeP ポートフォリオ">
+  <meta name="twitter:description" content="イラスト・キャラクターデザイン・生成AI活用。ikePの作品と依頼・販売の窓口。">
+  <meta name="twitter:image" content="assets/ogp.png">
+  <!-- TODO(publish): og:url / twitter:image を https://<公開ドメイン>/... の絶対URLに更新 -->
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap">
+      <nav class="nav" data-nav data-open="false" aria-label="メインナビゲーション">
+        <a class="brand" href="index.html">
+          <img class="brand__mark" src="assets/favicon.svg" alt="" aria-hidden="true">
+          <span>ikeP</span>
+        </a>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-label="メニュー" aria-expanded="false">
+          <span></span>
+        </button>
+        <div class="nav__links">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="works.html">Works</a>
+          <a href="#about">About</a>
+          <a href="#shop">Shop</a>
+          <a href="#contact" class="is-cta">仕事の依頼</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <span class="hero__tag">イラスト × キャラクター × 生成AI</span>
+          <h1 id="hero-title">絵とAIで、<br><span class="accent">伝わる</span>をつくる。</h1>
+          <p class="hero__lead">
+            ikeP（イケピー）です。キャラクターやイラストの制作から、生成AIを使った表現・仕組みづくりまで。
+            「作りたい」を形にして、ちゃんと届くところまで一緒に考えます。
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--ink" href="#contact">仕事を依頼する <span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
+            <a class="btn btn--ghost" href="works.html">作品を見る</a>
+          </div>
+          <div class="hero__meta">
+            <span><b>SHIFT AI</b> コミュニティ登壇・活動</span>
+            <span><b>生成AIパスポート</b> 取得</span>
+          </div>
+        </div>
+        <div class="hero__art">
+          <div class="hero__art-bg" aria-hidden="true"></div>
+          <img class="hero__mascot" src="assets/ikepy.svg" alt="ikePのマスコット「イケピー」" width="320" height="340">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALUE STRIP（30秒で伝わる3点）============ -->
+    <section class="valuestrip" aria-label="ikePの強み">
+      <div class="wrap valuestrip__grid">
+        <div class="value reveal">
+          <div class="value__k">Create</div>
+          <div class="value__t">つくる</div>
+          <p class="value__d">キャラクター・イラスト・デザイン。用途に合わせて一点ものを制作します。</p>
+        </div>
+        <div class="value reveal">
+          <div class="value__k">AI</div>
+          <div class="value__t">活用する</div>
+          <p class="value__d">生成AIを表現と効率化の両面で。使いどころを見極めて取り入れます。</p>
+        </div>
+        <div class="value reveal">
+          <div class="value__k">Deliver</div>
+          <div class="value__t">届ける</div>
+          <p class="value__d">グッズや配信で作品を販売。見てもらう・使ってもらうまでを設計します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORKS（抜粋）============ -->
+    <section class="section" id="works-preview" aria-labelledby="works-h">
+      <div class="wrap">
+        <div class="section-head section-head--row">
+          <div>
+            <span class="eyebrow">Works</span>
+            <h2 id="works-h">最近の作品</h2>
+          </div>
+          <a class="link-more btn btn--ghost" href="works.html">すべての作品 <span class="btn__arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <!-- data-works-limit=3 / フィルタ非表示。詳細は works.html -->
+        <div data-works data-works-limit="3" data-works-filters="false"></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--tight" id="about" aria-labelledby="about-h" style="background:var(--c-surface-2); border-block:1px solid var(--c-line);">
+      <div class="wrap about__grid">
+        <div class="about__card reveal">
+          <img class="about__avatar" src="assets/ikepy.svg" alt="" aria-hidden="true">
+          <h3 class="about__name">ikeP / イケピー</h3>
+          <p class="about__role">イラストレーター・生成AIクリエイター</p>
+          <p class="about__bio">
+            キャラクターづくりと生成AIが好きなクリエイター。<br>
+            （※プロフィール本文は後で差し替え）
+          </p>
+          <ul class="creds">
+            <li class="cred">
+              <span class="cred__mark">◆</span>
+              <span>
+                <span class="cred__t">SHIFT AI</span><br>
+                <span class="cred__d">生成AIコミュニティでの活動・発信</span>
+              </span>
+            </li>
+            <li class="cred">
+              <span class="cred__mark">◆</span>
+              <span>
+                <span class="cred__t">生成AIパスポート</span><br>
+                <span class="cred__d">JDLA関連／生成AI活用の基礎資格を取得</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="about__body reveal">
+          <span class="eyebrow">About</span>
+          <h2 id="about-h">「ikePって何者？」</h2>
+          <p class="about__lead" style="margin-top:var(--sp-4);">
+            絵で表現することと、AIで新しいやり方を試すこと。その両方を行き来しながら作っています。
+          </p>
+          <p style="margin-top:var(--sp-4); color:var(--c-ink-700);">
+            イラストやキャラクターデザインを軸に、生成AIを取り入れた制作や、
+            仕組みづくりまで対応します。「親しみやすさ」と「ちゃんと使える」の両立が身上です。
+          </p>
+          <p>
+            制作のご相談から、グッズ・スタンプの販売まで。下のショップや窓口からお気軽にどうぞ。
+            （このプロフィール文面は仮です。実績・経歴を後から追記できます。）
+          </p>
+          <div style="margin-top:var(--sp-6); display:flex; gap:var(--sp-3); flex-wrap:wrap;">
+            <a class="btn btn--primary" href="#contact">依頼・相談する</a>
+            <a class="btn btn--ghost" href="#shop">作品を買う</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SHOP ============ -->
+    <section class="section" id="shop" aria-labelledby="shop-h">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Shop</span>
+          <h2 id="shop-h">作品を手に入れる</h2>
+          <p>グッズ・スタンプ・制作依頼は各サービスから。決済は各外部サイト上で行われます。</p>
+        </div>
+        <div class="shop-grid" data-shop></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Contact</span>
+          <h2 id="contact-h">お仕事のご依頼・ご連絡</h2>
+          <p class="contact__lead">
+            イラスト・キャラクター制作、生成AI関連のご相談など。SNSのDMやフォームからお気軽にどうぞ。
+          </p>
+        </div>
+        <div class="contact__links">
+          <a class="contact__link" href="#" target="_blank" rel="noopener">
+            <span aria-hidden="true">𝕏</span> X（旧Twitter）
+          </a>
+          <a class="contact__link" href="#" target="_blank" rel="noopener">
+            <span aria-hidden="true">✎</span> note
+          </a>
+          <a class="contact__link" href="#" target="_blank" rel="noopener">
+            <span aria-hidden="true">✉</span> お問い合わせフォーム
+          </a>
+        </div>
+        <p style="margin-top:var(--sp-5); font-size:var(--fs-cap); color:var(--c-teal-200);">
+          ※ リンク先URLは公開前に差し替えてください（現在はダミー）。
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="assets/favicon.svg" alt="" aria-hidden="true">
+        <span>ikeP</span>
+      </a>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="works.html">Works</a>
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <small>&copy; <span data-year>2026</span> ikeP. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/works.js" defer></script>
+  <script src="js/shop.js" defer></script>
+</body>
+</html>

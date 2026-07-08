@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" role="img" aria-label="イケピー（ikePのマスコット・仮）">
+  <defs>
+    <clipPath id="ikepyBody"><rect x="46" y="70" width="228" height="228" rx="70"/></clipPath>
+  </defs>
+
+  <!-- 足元の影 -->
+  <ellipse cx="160" cy="312" rx="96" ry="14" fill="#063f3d" opacity="0.08"/>
+
+  <!-- 新芽（AIの芽） -->
+  <path d="M160 74C160 52 148 40 132 38c4 14 12 22 24 26" fill="#35b9b0"/>
+  <path d="M160 74C160 50 174 38 192 38c-4 15-14 24-30 30" fill="#109b93"/>
+  <circle cx="160" cy="46" r="7" fill="#f6a623"/>
+
+  <!-- 本体 -->
+  <rect x="46" y="70" width="228" height="228" rx="70" fill="#109b93"/>
+  <g clip-path="url(#ikepyBody)">
+    <rect x="46" y="196" width="228" height="102" fill="#0d7c76"/>
+    <circle cx="86" cy="250" r="70" fill="#0b615d" opacity="0.35"/>
+  </g>
+
+  <!-- ほっぺ -->
+  <circle cx="108" cy="205" r="15" fill="#f6a623" opacity="0.55"/>
+  <circle cx="212" cy="205" r="15" fill="#f6a623" opacity="0.55"/>
+
+  <!-- 目 -->
+  <circle cx="118" cy="176" r="17" fill="#ffffff"/>
+  <circle cx="202" cy="176" r="17" fill="#ffffff"/>
+  <circle cx="122" cy="179" r="7.5" fill="#063f3d"/>
+  <circle cx="198" cy="179" r="7.5" fill="#063f3d"/>
+  <circle cx="125" cy="176" r="2.4" fill="#ffffff"/>
+  <circle cx="201" cy="176" r="2.4" fill="#ffffff"/>
+
+  <!-- 口 -->
+  <path d="M142 214c10 12 26 12 36 0" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "_note": "作品を増やすときは items 配列に1オブジェクト追記するだけ。category は categories の id を使う。thumb は assets/works/ 配下の画像パス。",
+  "categories": [
+    { "id": "illustration", "label": "イラスト" },
+    { "id": "character", "label": "キャラクター" },
+    { "id": "design", "label": "デザイン" }
+  ],
+  "items": [
+    {
+      "id": "sample-001",
+      "title": "サンプル作品 A",
+      "category": "illustration",
+      "thumb": "assets/works/w1.svg",
+      "tags": ["仮データ", "イラスト"],
+      "description": "ここに作品の一言説明が入ります。実データに差し替えてください。",
+      "url": "",
+      "date": "2026-01"
+    },
+    {
+      "id": "sample-002",
+      "title": "サンプル作品 B",
+      "category": "character",
+      "thumb": "assets/works/w2.svg",
+      "tags": ["仮データ", "キャラクター"],
+      "description": "キャラクターデザインの説明サンプル。差し替え用のダミーです。",
+      "url": "",
+      "date": "2026-02"
+    },
+    {
+      "id": "sample-003",
+      "title": "サンプル作品 C",
+      "category": "design",
+      "thumb": "assets/works/w3.svg",
+      "tags": ["仮データ", "バナー"],
+      "description": "デザイン系の作品説明サンプル。実績に応じて書き換えます。",
+      "url": "",
+      "date": "2026-03"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="作品サンプル2（差し替え用プレースホルダー）">
+  <rect width="800" height="600" fill="#eef8f7"/>
+  <circle cx="400" cy="270" r="150" fill="#35b9b0"/>
+  <circle cx="352" cy="250" r="20" fill="#063f3d"/>
+  <circle cx="448" cy="250" r="20" fill="#063f3d"/>
+  <path d="M350 320c30 34 70 34 100 0" fill="none" stroke="#063f3d" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="400" cy="110" r="16" fill="#f6a623"/>
+  <text x="740" y="560" text-anchor="end" font-family="sans-serif" font-size="26" fill="#0b615d" opacity="0.55">SAMPLE</text>
+</svg>
