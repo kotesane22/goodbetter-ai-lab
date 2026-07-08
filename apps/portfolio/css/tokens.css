@@ -36,6 +36,18 @@
   --c-primary-ink: #ffffff;
   --c-link:        var(--c-teal-600);
 
+  /* 濃色/ブランド面の上に置く前景色 */
+  --c-on-dark:     #ffffff;
+
+  /* contact（濃ティール面）専用の前景色と半透明オーバーレイ */
+  --c-contact-bg:      var(--c-teal-900);
+  --c-contact-text:    #dff2ef;
+  --c-contact-lead:    #bfe0dc;
+  --c-overlay-weak:    rgba(255, 255, 255, 0.06);
+  --c-overlay-soft:    rgba(255, 255, 255, 0.14);
+  --c-overlay-line:    rgba(255, 255, 255, 0.16);
+  --c-overlay-strong:  rgba(255, 255, 255, 0.40);
+
   /* ---- typography ---- */
   --ff-base: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
              "Noto Sans JP", "Yu Gothic Medium", "Meiryo",
