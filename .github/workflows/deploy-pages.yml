@@ -35,6 +35,14 @@ jobs:
       - name: Add .nojekyll
         run: touch apps/diagnostic-tool/out/.nojekyll
 
+      - name: Publish portfolio (static site) under /portfolio
+        run: |
+          mkdir -p apps/diagnostic-tool/out/portfolio
+          cp -r apps/portfolio/. apps/diagnostic-tool/out/portfolio/
+          # 公開物にはドキュメント類を含めない
+          rm -f apps/diagnostic-tool/out/portfolio/CLAUDE.md \
+                apps/diagnostic-tool/out/portfolio/README.md
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:

@@ -41,10 +41,21 @@ python3 -m http.server 8000
 # → http://localhost:8000/
 ```
 
+## 公開（GitHub Pages）
+
+このサイトはモノレポ共通の `.github/workflows/deploy-pages.yml` で、
+`main` への push 時に静的コピーされ、以下のサブパスに公開される。
+
+- 公開URL: `https://kotesane22.github.io/goodbetter-ai-lab/portfolio/`
+
+ワークフローは `apps/portfolio/` を `out/portfolio/` にコピーするだけ
+（ビルド不要）。`CLAUDE.md` / `README.md` は公開物から除外される。
+手動デプロイは GitHub → Actions → "Deploy to GitHub Pages" → Run workflow。
+
 ## 公開前チェック
 
 - [ ] `data/works.json` を実データに差し替え、`assets/works/` に画像配置
 - [ ] `data/shop.json` の各 `url` を実際の販売ページに設定
 - [ ] Contact の X / note / お問い合わせフォームのリンクを設定
-- [ ] `index.html` / `works.html` の OGP `og:image` を公開ドメインの絶対URLに更新
 - [ ] About のプロフィール本文・実績を確定
+- [ ] （別リポジトリ `ikep` で公開し直す場合）OGP絶対URLを新ドメインに更新
