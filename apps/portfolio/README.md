@@ -41,16 +41,15 @@ python3 -m http.server 8000
 # → http://localhost:8000/
 ```
 
-## 公開（GitHub Pages）
+## 公開（GitHub Pages・独立リポジトリ）
 
-このサイトはモノレポ共通の `.github/workflows/deploy-pages.yml` で、
-`main` への push 時に静的コピーされ、以下のサブパスに公開される。
+このサイトは独立リポジトリ `kotesane22/ikep` のルートに配置して公開する。
+`apps/portfolio/` の中身がそのまま `ikep` リポジトリのルートになる。
 
-- 公開URL: `https://kotesane22.github.io/goodbetter-ai-lab/portfolio/`
+- 公開URL: `https://kotesane22.github.io/ikep/`
+- Pages 設定: Settings → Pages → Source =「Deploy from a branch」→ `main` / `/ (root)`
 
-ワークフローは `apps/portfolio/` を `out/portfolio/` にコピーするだけ
-（ビルド不要）。`CLAUDE.md` / `README.md` は公開物から除外される。
-手動デプロイは GitHub → Actions → "Deploy to GitHub Pages" → Run workflow。
+ビルド不要（純静的）。作品・販売リンクは JSON 追記のみで更新できる。
 
 ## 公開前チェック
 
@@ -58,4 +57,3 @@ python3 -m http.server 8000
 - [ ] `data/shop.json` の各 `url` を実際の販売ページに設定
 - [ ] Contact の X / note / お問い合わせフォームのリンクを設定
 - [ ] About のプロフィール本文・実績を確定
-- [ ] （別リポジトリ `ikep` で公開し直す場合）OGP絶対URLを新ドメインに更新
