@@ -1,38 +1,38 @@
 {
   "_note": "作品を増やすときは items 配列に1オブジェクト追記するだけ。category は categories の id を使う。thumb は assets/works/ 配下の画像パス。",
   "categories": [
-    { "id": "illustration", "label": "イラスト" },
-    { "id": "character", "label": "キャラクター" },
-    { "id": "design", "label": "デザイン" }
+    { "id": "ai-image", "label": "AI画像" },
+    { "id": "copy", "label": "コピー・文章" },
+    { "id": "content", "label": "コンテンツ" }
   ],
   "items": [
     {
       "id": "sample-001",
-      "title": "サンプル作品 A",
-      "category": "illustration",
+      "title": "AIビジュアル制作サンプル",
+      "category": "ai-image",
       "thumb": "assets/works/w1.svg",
-      "tags": ["仮データ", "イラスト"],
-      "description": "ここに作品の一言説明が入ります。実データに差し替えてください。",
+      "tags": ["仮データ", "画像生成"],
+      "description": "テーマからトーンまで詰めて仕上げたAI画像の一例。ここに実制作を差し替えます。",
       "url": "",
-      "date": "2026-01"
+      "date": "2026-05"
     },
     {
       "id": "sample-002",
-      "title": "サンプル作品 B",
-      "category": "character",
+      "title": "キャッチコピー / 文章サンプル",
+      "category": "copy",
       "thumb": "assets/works/w2.svg",
-      "tags": ["仮データ", "キャラクター"],
-      "description": "キャラクターデザインの説明サンプル。差し替え用のダミーです。",
+      "tags": ["仮データ", "コピー"],
+      "description": "商品やサービスの魅力を一行に。コピーライティングの実績サンプル。",
       "url": "",
-      "date": "2026-02"
+      "date": "2026-04"
     },
     {
       "id": "sample-003",
-      "title": "サンプル作品 C",
-      "category": "design",
+      "title": "AI×コンテンツ制作サンプル",
+      "category": "content",
       "thumb": "assets/works/w3.svg",
-      "tags": ["仮データ", "バナー"],
-      "description": "デザイン系の作品説明サンプル。実績に応じて書き換えます。",
+      "tags": ["仮データ", "コンテンツ"],
+      "description": "note記事やSNS運用など、AIを絡めたコンテンツ制作の一例。",
       "url": "",
       "date": "2026-03"
     }

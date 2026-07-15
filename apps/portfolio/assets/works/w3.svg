@@ -1,9 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="作品サンプル3（差し替え用プレースホルダー）">
-  <rect width="800" height="600" fill="#063f3d"/>
-  <rect x="120" y="150" width="560" height="300" rx="20" fill="#0b615d"/>
-  <rect x="160" y="200" width="240" height="30" rx="15" fill="#a6e3dd"/>
-  <rect x="160" y="252" width="360" height="20" rx="10" fill="#35b9b0" opacity="0.7"/>
-  <rect x="160" y="292" width="300" height="20" rx="10" fill="#35b9b0" opacity="0.5"/>
-  <circle cx="560" cy="360" r="46" fill="#f6a623"/>
-  <text x="660" y="430" text-anchor="end" font-family="sans-serif" font-size="24" fill="#a6e3dd" opacity="0.7">SAMPLE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="コンテンツサンプル（差し替え用）">
+  <rect width="600" height="600" fill="#1b1710"/>
+  <rect x="90" y="80" width="420" height="300" rx="10" fill="#e7dcc4"/>
+  <rect x="90" y="80" width="420" height="150" rx="10" fill="#e0a63c"/>
+  <circle cx="180" cy="155" r="42" fill="#211c14"/>
+  <rect x="120" y="270" width="300" height="18" rx="9" fill="#211c14"/>
+  <rect x="120" y="306" width="360" height="14" rx="7" fill="#857b69"/>
+  <rect x="120" y="334" width="230" height="14" rx="7" fill="#a99e88"/>
+  <g fill="#e7dcc4">
+    <rect x="90" y="420" width="130" height="90" rx="8"/>
+    <rect x="235" y="420" width="130" height="90" rx="8" opacity="0.7"/>
+    <rect x="380" y="420" width="130" height="90" rx="8" opacity="0.45"/>
+  </g>
+  <text x="560" y="566" text-anchor="end" font-family="Georgia,serif" font-size="22" fill="#857b69">SAMPLE</text>
 </svg>

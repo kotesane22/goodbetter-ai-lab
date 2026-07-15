@@ -2,6 +2,9 @@
 (function () {
   "use strict";
 
+  // JS有効フラグ（.reveal の初期非表示はこの時だけ効く）
+  document.documentElement.classList.add("has-js");
+
   // --- mobile nav toggle ---
   var nav = document.querySelector("[data-nav]");
   var toggle = document.querySelector("[data-nav-toggle]");

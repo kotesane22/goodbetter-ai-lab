@@ -79,9 +79,6 @@
     }
 
     function cardHTML(it) {
-      var tag = (it.tags || []).map(function (t) {
-        return '<span class="work__tag">' + esc(t) + "</span>";
-      }).join("");
       var label = catLabel[it.category] || it.category || "";
       var hasLink = it.url && it.url.length;
       var el = hasLink ? "a" : "div";
@@ -89,13 +86,12 @@
       return (
         "<" + el + ' class="work"' + attr + ">" +
           '<div class="work__media">' +
-            '<img src="' + esc(it.thumb) + '" alt="' + esc(it.title) + '" loading="lazy" width="800" height="600">' +
+            '<img src="' + esc(it.thumb) + '" alt="' + esc(it.title) + '" loading="lazy" width="600" height="600">' +
             (label ? '<span class="work__cat">' + esc(label) + "</span>" : "") +
           "</div>" +
           '<div class="work__body">' +
             '<h3 class="work__title">' + esc(it.title) + "</h3>" +
             (it.description ? '<p class="work__desc">' + esc(it.description) + "</p>" : "") +
-            (tag ? '<div class="work__tags">' + tag + "</div>" : "") +
           "</div>" +
         "</" + el + ">"
       );
