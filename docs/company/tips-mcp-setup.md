@@ -8,13 +8,14 @@ Tipsは公式にMCP対応しており、Claude(Claude.ai / Claude Desktop / Clau
 
 ## 接続手順(いずれか1つでOK)
 
+**TipsのMCPサーバーURL(確認済み・2026-07-22): `https://tips.jp/mcp`**
+
 ### A. claude.ai のコネクタとして登録(いちばん簡単・おすすめ)
 
-1. Tipsにログインし、マイページの設定からMCP連携のページを開く
-2. 表示される **MCPサーバーURL** をコピーする
-3. claude.ai → 設定 → コネクタ → 「カスタムコネクタを追加」でURLを貼り付け
-4. 認証(TipsアカウントでのOAuth)を済ませる
-5. Claude Code(Web版)のセッションでもコネクタとして使えるようになる
+1. claude.ai → 設定 → コネクタ → 「カスタムコネクタを追加」
+2. URLに `https://tips.jp/mcp` を貼り付けて追加
+3. 認証(TipsアカウントでのOAuth)を済ませる
+4. Claude Code(Web版)のセッションでもコネクタとして使えるようになる
 
 ### B. Claude Code(ローカル/CLI)に直接追加
 

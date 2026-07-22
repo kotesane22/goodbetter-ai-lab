@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tips": {
+      "type": "http",
+      "url": "https://tips.jp/mcp"
+    }
+  }
+}
